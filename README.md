@@ -1,4 +1,4 @@
-# Noise-in, Bias-out
+# Single-shot Motion Synthesis
 
 This is the repository that contains source code for the [paper page](https://moverseai.github.io/single-shot).
 
