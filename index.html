@@ -43,6 +43,8 @@
   <script src="./static/js/dics.js"></script>
   <link rel="stylesheet" href="./static/css/BeerSlider.css"/>
   <script src="./static/js/BeerSlider.js"></script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
 </head>
 <body>
 
@@ -73,10 +75,10 @@
           <a class="navbar-item" href="https://moverseai.github.io/bundle">
             BundleMoCap
           </a>
-          <!-- <a class="navbar-item" href="https://moverseai.github.io/Placeholder3">
-            Moverse Placeholder #3
+          <a class="navbar-item" href="https://moverseai.github.io/single-shot">
+            Ganimator++
           </a>
-          <a class="navbar-item" href="https://moverseai.github.io/Placeholder4">
+          <!--<a class="navbar-item" href="https://moverseai.github.io/Placeholder4">
             Moverse Placeholder #4
           </a> -->
         </div>
@@ -92,9 +94,8 @@
       <div class="columns is-centered">
         <div class="column has-text-centered">
           <img width=8% src="./static/images/mov_icon.png" class="center">
-          <br><br>
-          <h2>CVPR 2024, AI for 3D Generation Workshop</h2>
-          <br>
+          <br><br>          
+          <!-- <br> -->
           <h1 class="title is-1 publication-title">Towards Practical Single-shot Motion Synthesis</h1>
           <div class="is-size-5 publication-authors">
             <span class="author-block">
@@ -102,11 +103,12 @@
             <span class="author-block">
               <a href="https://spthermo.github.io/">Spyridon Thermos</a>, </span>
             <span class="author-block">
-                <a href="https://zokin.github.io">Nikolaos Zioulis</a></span>
+                <a href="https://zokin.github.io">Nikolaos Zioulis</a></span>                
           </div>
 
           <div class="is-size-5 publication-authors">
             <span class="author-block"><a href="https://www.moverse.ai">Moverse</a></span>
+            <h2>CVPR 2024, AI for 3D Generation Workshop</h2>
           </div>
 
           <div class="column has-text-centered">
@@ -150,15 +152,15 @@
                 </a>
               </span> -->
               <!-- Code Link. -->
-              <!-- <span class="link-block">
-                <a href="https://github.com/moverseai/noise-tail"
+              <span class="link-block">
+                <a href="https://github.com/moverseai/ganimateer"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="fab fa-github"></i>
                   </span>
-                  <span>Code</span>
+                  <span>Code (Coming Soon)</span>
                   </a>
-              </span> -->
+              </span>
               <!-- Dataset Link. -->
               <!-- <span class="link-block">
                 <a href="https://github.com/moverseai/noise-tail"
@@ -196,7 +198,7 @@
   <div class="container is-max-desktop">
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
-        <h2 class="title is-3">Abstract</h2>
+        <h2 class="title is-2">Abstract</h2>
         <div class="content has-text-justified">
           <p>
             Despite the recent advances in the so-called "cold start" generation from text prompts, their needs in data and computing resources, as well as the ambiguities around intellectual property and privacy concerns pose certain counterarguments for their utility. 
@@ -206,7 +208,7 @@
             In this paper we focus on single-shot motion generation and more specifically on accelerating the training time of a Generative Adversarial Network (GAN).
             In particular, we tackle the challenge of destroying the equilibrium of the GAN when using mini-batch training by carefully annealing the weights of the loss functions that prevent mode collapse. 
             Additionally, we perform statistical analysis in the generator and discriminator models to identify correlations between training stages and enable transfer learning.
-            Our improved GAN achieves competitive quality and diversity on the Mixamo benchmark when compared to the original GAN architecture and a single-shot diffusion model, while being up to $\times 6.8$ faster in training time from the former and $\times 1.75$ from the latter.             
+            Our improved GAN achieves competitive quality and diversity on the Mixamo benchmark when compared to the original GAN architecture and a single-shot diffusion model, while being up to \(\times 6.8\) faster in training time from the former and \(\times 1.75\) from the latter.
           </p>
           <p> 
             Finally, we demonstrate the ability of our improved GAN to mix and compose motion with a single forward pass.
@@ -222,11 +224,11 @@
       <!-- columns is-full-width -->
       <div class="columns is-centered">
         <div class="column is-centered has-text-centered">
-          <h3 class="title is-3">Mixamo-based Generation</h3>
-          <p>
-            This video presents a comparative analysis of various multi-view methods on <a href="http://vision.imar.ro/human3.6m/description.php">Human3.6M</a> dataset on various actions.
-             <!-- integrate data-driven priors like <a href="#VPoser">VPoser <b>[6]</b></a> and <a href="#HuMoR">HuMoR <b>[7]</b></a> to refine motion capture precision beyond traditional methods. -->
-          </p>
+          <h2 class="title is-2">Mixamo-based Generation</h2>
+          <h3 class="title is-3">Single-Motion Variations</h3>
+          <!-- <p>
+            
+          </p> -->
           <video muted="" loop="" playsinline="" controls="" width="100%">
             <source src="./static/videos/mixamo_breakdance_freezes_gen.mp4" type="video/mp4">
         </video>
@@ -240,10 +242,10 @@
       <!-- columns is-full-width -->
       <div class="columns is-centered">
         <div class="column is-centered has-text-centered">
-          <p>
-            This video presents a comparative analysis of various multi-view methods on <a href="http://vision.imar.ro/human3.6m/description.php">Human3.6M</a> dataset on various actions.
-             <!-- integrate data-driven priors like <a href="#VPoser">VPoser <b>[6]</b></a> and <a href="#HuMoR">HuMoR <b>[7]</b></a> to refine motion capture precision beyond traditional methods. -->
-          </p>
+          <h3 class="title is-3">Body-part Motion Composition</h3>
+          <!-- <p>
+
+          </p> -->
           <video muted="" loop="" playsinline="" controls="" width="100%">
             <source src="./static/videos/mixamo_swing_dancing_upper_body_gen.mp4" type="video/mp4">
         </video>
@@ -257,10 +259,10 @@
       <!-- columns is-full-width -->
       <div class="columns is-centered">
         <div class="column is-centered has-text-centered">
-          <p>
-            This video presents a comparative analysis of various multi-view methods on <a href="http://vision.imar.ro/human3.6m/description.php">Human3.6M</a> dataset on various actions.
-             <!-- integrate data-driven priors like <a href="#VPoser">VPoser <b>[6]</b></a> and <a href="#HuMoR">HuMoR <b>[7]</b></a> to refine motion capture precision beyond traditional methods. -->
-          </p>
+          <h3 class="title is-3">Crowd Animation</h3>
+          <!-- <p>
+          
+          </p> -->
           <video muted="" loop="" playsinline="" controls="" width="100%">
             <source src="./static/videos/mixamo_dancing_crowd_gen.mp4" type="video/mp4">
         </video>
@@ -298,6 +300,30 @@
 }</code></pre>
   </div>
 </section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="content has-text-centered">
+      <a class="icon-link"
+         href="./static/pdf/paper.pdf">
+        <i class="fas fa-file-pdf"></i>
+      </a>
+      <!-- <a class="icon-link" href="https://github.com/moverseai" class="external-link" disabled>
+        <i class="fab fa-github"></i>
+      </a> -->
+      <a class="icon-link" href="https://discord.gg/bQc7B6qSPd" class="external-link" disabled>
+        <i class="fab fa-discord"></i>
+      </a>
+    </div>
+    <div class="columns is-centered">
+        <div class="content">
+          <p>
+            The website template is borrowed from <a href="https://nerfies.github.io" target="_blank">nerfies</a>.
+          </p>
+        </div>
+    </div>
+  </div>
+</footer>
 
 <script>
   $.fn.BeerSlider = function ( options ) {
