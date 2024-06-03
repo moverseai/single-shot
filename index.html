@@ -76,11 +76,8 @@
             BundleMoCap
           </a>
           <a class="navbar-item" href="https://moverseai.github.io/single-shot">
-            Ganimator++
+            Single-shot
           </a>
-          <!--<a class="navbar-item" href="https://moverseai.github.io/Placeholder4">
-            Moverse Placeholder #4
-          </a> -->
         </div>
       </div>
     </div>
@@ -206,7 +203,7 @@
           </p>
           <p>              
             In this paper we focus on single-shot motion generation and more specifically on accelerating the training time of a Generative Adversarial Network (GAN).
-            In particular, we tackle the challenge of destroying the equilibrium of the GAN when using mini-batch training by carefully annealing the weights of the loss functions that prevent mode collapse. 
+            In particular, we tackle the challenge of GAN's equilibrium collapse when using mini-batch training by carefully annealing the weights of the loss functions that prevent mode collapse. 
             Additionally, we perform statistical analysis in the generator and discriminator models to identify correlations between training stages and enable transfer learning.
             Our improved GAN achieves competitive quality and diversity on the Mixamo benchmark when compared to the original GAN architecture and a single-shot diffusion model, while being up to \(\times 6.8\) faster in training time from the former and \(\times 1.75\) from the latter.
           </p>
@@ -225,10 +222,16 @@
       <div class="columns is-centered">
         <div class="column is-centered has-text-centered">
           <h2 class="title is-2">Mixamo-based Generation</h2>
+          <p>
+            We provide some indicative applications of our single-shot GAN that <b>do not need</b> any re-training.
+          </p>
+          <br>
+          <br>
           <h3 class="title is-3">Single-Motion Variations</h3>
-          <!-- <p>
-            
-          </p> -->
+          <p>
+            We use our single-shot GAN trained on the "breakdance freezes" sequence from the <a href="www.mixamo.com">Mixamo</a> dataset to generate variations of the "breakdance freezes" sample by sampling different codes from a Gaussian distribution.
+            For visualization purposes, we perform Adam-based IK from <a href="https://peizhuoli.github.io/ganimator">[1]</a> and use the "Michelle" rig provided by <a href="www.mixamo.com">Mixamo</a>.
+          </p>
           <video muted="" loop="" playsinline="" controls="" width="100%">
             <source src="./static/videos/mixamo_breakdance_freezes_gen.mp4" type="video/mp4">
         </video>
@@ -244,8 +247,8 @@
         <div class="column is-centered has-text-centered">
           <h3 class="title is-3">Upper-body Motion Composition</h3>
           <p>
-              We use the Mixamo motion “swing dancing” as an example input sequence, keeping the lower-body unaltered (fixed) and generating 7 alternative - but natural - versions of the upper-body.
-              We perform Adam-based IK from <a href="https://peizhuoli.github.io/ganimator">[1]</a> and retarget the final result to the "Jackie" rig provided by <a href="www.mixamo.com">Mixamo</a>.
+              We use the Mixamo motion "swing dancing" as an example input sequence, keeping the lower-body unaltered (fixed) and generating 7 alternative - but natural - versions of the upper-body.
+              Again, we perform Adam-based IK from <a href="https://peizhuoli.github.io/ganimator">[1]</a> and retarget the final result to the "Jackie" rig provided by <a href="www.mixamo.com">Mixamo</a>.
           </p>
           <video muted="" loop="" playsinline="" controls="" width="100%">
             <source src="./static/videos/mixamo_swing_dancing_gen.mp4" type="video/mp4">
@@ -262,8 +265,8 @@
         <div class="column is-centered has-text-centered">
           <h3 class="title is-3">Lower-body Motion Composition</h3>
           <p>
-              Changing to the “salsa dancing” input sequence, we now keep the upper-body fixed and sample partial codes for 7 alternative versions of the lower-body.
-              Again, we perform Adam-based IK from <a href="https://peizhuoli.github.io/ganimator">[1]</a> and use the "Michelle" rig provided by <a href="www.mixamo.com">Mixamo</a>.
+              Changing to the "salsa dancing" input sequence, we now keep the upper-body fixed and sample partial codes for 7 alternative versions of the lower-body.
+              Here, we use the same IK and the "Michelle" character for visualization.
           </p>
           <video muted="" loop="" playsinline="" controls="" width="100%">
             <source src="./static/videos/mixamo_salsa_dancing_gen.mp4" type="video/mp4">
@@ -279,9 +282,10 @@
       <div class="columns is-centered">
         <div class="column is-centered has-text-centered">
           <h3 class="title is-3">Crowd Animation</h3>
-          <!-- <p>
-          
-          </p> -->
+          <p>
+          Following <a href="https://peizhuoli.github.io/ganimator">[1]</a> and <a href="https://sinmdm.github.io/SinMDM-page">[2]</a> we provide an example of a "crowd" dancing using generated variations of the "dancing" sequence of the <a href="www.mixamo.com">Mixamo</a> dataset.
+          Again, we perform the Adam-based IK and retarget the final result to the "Jackie" character.
+          </p>
           <video muted="" loop="" playsinline="" controls="" width="100%">
             <source src="./static/videos/mixamo_dancing_crowd_gen.mp4" type="video/mp4">
         </video>
