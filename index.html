@@ -110,25 +110,6 @@
 
           <div class="column has-text-centered">
             <div class="publication-links">
-              <!-- PDF Link. -->
-              <!-- <span class="link-block">
-                <a href="https://openaccess.thecvf.com/content/ICCV2023W/CV4Metaverse/papers/Albanis_Noise-in_Bias-out_Balanced_and_Real-Time_MoCap_Solving_ICCVW_2023_paper.pdf"
-                   class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                      <i class="fas fa-file-pdf"></i>
-                  </span>
-                  <span>Paper</span>
-                </a>
-              </span> -->
-              <!-- <span class="link-block">
-                <a href="https://openaccess.thecvf.com/content/ICCV2023W/WORKSHOP/supplemental/XXXX_supplemental.pdf"
-                   class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                      <i class="fas fa-file-pdf"></i>
-                  </span>
-                  <span>Supplementary</span>
-                </a>
-              </span>   -->
               <span class="link-block">
                 <a href="https://arxiv.org/pdf/2309.14330.pdf"
                    class="external-link button is-normal is-rounded is-dark">
@@ -138,17 +119,6 @@
                   <span>arXiv</span>
                 </a>
               </span>                                                                   
-              <!-- Video Link. -->
-              <!-- <span class="link-block">
-                <a href="https://www.youtube.com/watch?v=62ncJL4D0Cw"
-                   class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                      <i class="fab fa-youtube"></i>
-                  </span>
-                  <span>Video</span>
-                </a>
-              </span> -->
-              <!-- Code Link. -->
               <span class="link-block">
                 <a href="https://github.com/moverseai/ganimateer"
                    class="external-link button is-normal is-rounded is-dark">
@@ -158,15 +128,6 @@
                   <span>Code (Coming Soon)</span>
                   </a>
               </span>
-              <!-- Dataset Link. -->
-              <!-- <span class="link-block">
-                <a href="https://github.com/moverseai/noise-tail"
-                   class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                      <i class="far fa-images"></i>
-                  </span>
-                  <span>Data</span>
-                  </a> -->
             </div>
             <br>
           </div>
@@ -229,8 +190,8 @@
           <br>
           <h3 class="title is-3">Single-Motion Variations</h3>
           <p>
-            We use our single-shot GAN trained on the "breakdance freezes" sequence from the <a href="www.mixamo.com">Mixamo</a> dataset to generate variations of the "breakdance freezes" sample by sampling different codes from a Gaussian distribution.
-            For visualization purposes, we perform Adam-based IK from <a href="https://peizhuoli.github.io/ganimator">[1]</a> and use the "Michelle" rig provided by <a href="www.mixamo.com">Mixamo</a>.
+            We use our single-shot GAN trained on the "breakdance freezes" sequence from the <a href="https://www.mixamo.com">Mixamo</a> dataset to generate variations of the "breakdance freezes" sample by sampling different codes from a Gaussian distribution.
+            For visualization purposes, we perform Adam-based IK from <a href="https://peizhuoli.github.io/ganimator">[1]</a> and use the "Michelle" rig provided by <a href="https://www.mixamo.com">Mixamo</a>.
           </p>
           <video muted="" loop="" playsinline="" controls="" width="100%">
             <source src="./static/videos/mixamo_breakdance_freezes_gen.mp4" type="video/mp4">
@@ -248,7 +209,7 @@
           <h3 class="title is-3">Upper-body Motion Composition</h3>
           <p>
               We use the Mixamo motion "swing dancing" as an example input sequence, keeping the lower-body unaltered (fixed) and generating 7 alternative - but natural - versions of the upper-body.
-              Again, we perform Adam-based IK from <a href="https://peizhuoli.github.io/ganimator">[1]</a> and retarget the final result to the "Jackie" rig provided by <a href="www.mixamo.com">Mixamo</a>.
+              Again, we perform Adam-based IK from <a href="https://peizhuoli.github.io/ganimator">[1]</a> and retarget the final result to the "Jackie" rig provided by <a href="https://www.mixamo.com">Mixamo</a>.
           </p>
           <video muted="" loop="" playsinline="" controls="" width="100%">
             <source src="./static/videos/mixamo_swing_dancing_gen.mp4" type="video/mp4">
@@ -283,7 +244,8 @@
         <div class="column is-centered has-text-centered">
           <h3 class="title is-3">Crowd Animation</h3>
           <p>
-          Following <a href="https://peizhuoli.github.io/ganimator">[1]</a> and <a href="https://sinmdm.github.io/SinMDM-page">[2]</a> we provide an example of a "crowd" dancing using generated variations of the "dancing" sequence of the <a href="www.mixamo.com">Mixamo</a> dataset.
+          Following <a href="https://peizhuoli.github.io/ganimator">[1]</a> and <a href="https://sinmdm.github.io/SinMDM-page">[2]</a>
+          we provide an example of a "crowd" dancing using generated variations of the "dancing" sequence of the <a href="https://www.mixamo.com">Mixamo</a> dataset.
           Again, we perform the Adam-based IK and retarget the final result to the "Jackie" character.
           </p>
           <video muted="" loop="" playsinline="" controls="" width="100%">
@@ -341,7 +303,7 @@
     <div class="columns is-centered">
         <div class="content">
           <p>
-            The website template is borrowed from <a href="https://nerfies.github.io" target="_blank">nerfies</a>.
+            The website template has been adopted from <a href="https://nerfies.github.io" target="_blank">nerfies</a>.
           </p>
         </div>
     </div>
