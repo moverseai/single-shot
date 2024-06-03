@@ -242,12 +242,31 @@
       <!-- columns is-full-width -->
       <div class="columns is-centered">
         <div class="column is-centered has-text-centered">
-          <h3 class="title is-3">Body-part Motion Composition</h3>
-          <!-- <p>
-
-          </p> -->
+          <h3 class="title is-3">Upper-body Motion Composition</h3>
+          <p>
+              We use the Mixamo motion “swing dancing” as an example input sequence, keeping the lower-body unaltered (fixed) and generating 7 alternative - but natural - versions of the upper-body.
+              We perform Adam-based IK from <a href="https://peizhuoli.github.io/ganimator">[1]</a> and retarget the final result to the "Jackie" rig provided by <a href="www.mixamo.com">Mixamo</a>.
+          </p>
           <video muted="" loop="" playsinline="" controls="" width="100%">
-            <source src="./static/videos/mixamo_swing_dancing_upper_body_gen.mp4" type="video/mp4">
+            <source src="./static/videos/mixamo_swing_dancing_gen.mp4" type="video/mp4">
+        </video>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+      <!-- columns is-full-width -->
+      <div class="columns is-centered">
+        <div class="column is-centered has-text-centered">
+          <h3 class="title is-3">Lower-body Motion Composition</h3>
+          <p>
+              Changing to the “salsa dancing” input sequence, we now keep the upper-body fixed and sample partial codes for 7 alternative versions of the lower-body.
+              Again, we perform Adam-based IK from <a href="https://peizhuoli.github.io/ganimator">[1]</a> and use the "Michelle" rig provided by <a href="www.mixamo.com">Mixamo</a>.
+          </p>
+          <video muted="" loop="" playsinline="" controls="" width="100%">
+            <source src="./static/videos/mixamo_salsa_dancing_gen.mp4" type="video/mp4">
         </video>
       </div>
     </div>
